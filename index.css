@@ -1,0 +1,126 @@
+/* body{
+    background-color: azure;
+}
+.card{
+    width: 400px;
+    height: 70px;
+    background: slategrey;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+
+}.symbol{
+    width: 20px;
+    height: 20px;
+    background:green;
+    border-radius: 100%;
+    border: 10px;
+} */
+
+/* menampilkan class symbol didalam class card */
+/* .card > .symbol{
+    background: khaki;
+} */
+/* menampilkan css sebelum class card */
+/* .card::before{
+    content: '';
+    width: 30px;
+    height: 10px;
+    background-color: lightcoral;
+    display: block;
+} */
+/* menampilkan css sesudah class card */
+/* .card::after{
+    content: '';
+    width: 30px;
+    height: 10px;
+    background-color: lightcoral;
+    display: block;
+}
+.segitiga{
+    border-width: 50px;
+    border-color:transparent transparent antiquewhite transparent;
+    border-style: solid;
+    width: 0px;
+}
+.segitiga::before{
+    content: '';
+    border-width: 57px;
+    border-color: transparent transparent cornflowerblue transparent;
+    border-style: solid;
+    width: 0px;
+    position: absolute;
+    z-index: -1;
+    top: -2px;  */
+    /* kalau pake top jangan pake button */
+    /* left: 2px; */
+    /* jangan pake right */
+/* } */
+/* buat card nya kesamping  (rata kiri)*/
+/* .forflex{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: flex-start;
+} */
+
+body{
+    margin: 0px;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background: mistyrose;
+    grid-area: head ;
+}
+.sidebar{
+    width: 100px;
+    height: 100vh;
+    background: brown;
+    grid-area: side ;
+}
+.content{
+    width: 100%
+    height: calc(100% - 100px);
+    background: salmon;
+    grid-area: content;
+    }
+.forgrid{
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "head head" "side content";
+}
+.card{
+    display: flex;
+    justify-content: space-evenly;
+}
+.kesatu{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background: moccasin;
+
+}
+
+@media screen and (max-width: 1000px){
+    .forgrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: "100px auto 100px";
+        grid-template-areas: "head" "content" "side";
+    }
+    .sidebar{
+        width: 100%;
+        height: 50px;
+    }
+    .content{
+        width: 100%;
+        height: calc(100vh - 150px);
+    }
+    .header{
+        width: 100%;
+        height: 100px
+    }
+}
